@@ -8,22 +8,26 @@
   </head>
   <body>
     <div class="alert-box" id="alert">
-      <p>알림창</p>
-      <button onclick="closeAlert()">닫기</button>
+      <p id="title" class="title1">알림창</p>
+      <button id="close">닫기</button>
     </div>
-    <button onclick="openAlert('alert', '이름을 입력하세요.')">버튼1</button>
-    <button onclick="openAlert('alert', '비밀번호를 입력하세요.')">
-      버튼2
-    </button>
+    <button onclick="openAlert('아이디를 입력하시오')">버튼1</button>
+    <button onclick="openAlert('비밀번호를 입력하시오')">버튼2</button>
     <script>
-      function openAlert(idName, comment) {
-        document.getElementById(idName).innerHTML = comment;
-        document.getElementById(idName).style.display = 'block';
+      function openAlert(comment) {
+        // 1. p 태그에 아이디를 입력하시오 라고 글씨 바꾸기
+        document.getElementById('title').innerHTML = comment;
+        // 2. 화면에 보여주기
+        document.getElementsByClassName('title1').style.color = 'green';
       }
 
       function closeAlert() {
         document.getElementById('alert').style.display = 'none';
       }
+
+      document.getElementById('close').addEventListener('click', function () {
+        document.getElementById('alert').style.display = 'none';
+      });
     </script>
   </body>
 </html>
