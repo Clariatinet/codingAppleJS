@@ -16,17 +16,17 @@
     <script>
       function openAlert(comment) {
         // 1. p 태그에 아이디를 입력하시오 라고 글씨 바꾸기
-        document.getElementById('title').innerHTML = comment;
+        document.querySelector('#title').innerHTML = comment;
         // 2. 화면에 보여주기
-        document.getElementsByClassName('title1').style.color = 'green';
+        document.querySelector('.title1').style.color = 'green';
       }
 
       function closeAlert() {
-        document.getElementById('alert').style.display = 'none';
+        document.querySelector('#alert').style.display = 'none';
       }
 
-      document.getElementById('close').addEventListener('click', function () {
-        document.getElementById('alert').style.display = 'none';
+      document.querySelector('#close').addEventListener('click', function () {
+        document.querySelector('#alert').style.display = 'none';
       });
     </script>
   </body>

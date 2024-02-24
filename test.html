@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/test.css" />
   </head>
   <body>
-    <p class="hi">안녕</p>
+    <button class="button">클릭</button>
+    <div class="alert-box" id="alert">
+      <p class="title">알림창임</p>
+      <button id="close">닫기</button>
+    </div>
     <script>
-      // document.getElementsByClassName('hi')[0].style.color = 'blue';
+      document.querySelector('.button').addEventListener('click', function () {
+        document.querySelector('#alert').classList.toggle('show');
+      });
     </script>
   </body>
 </html>
