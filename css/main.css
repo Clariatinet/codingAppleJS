@@ -19,6 +19,15 @@
   display: none;
 }
 
+.main-bg {
+  padding: 100px 20px;
+  background-color: lightgray;
+}
+
+.show {
+  display: block;
+}
+
 .show-modal {
   visibility: visible;
   opacity: 1;
