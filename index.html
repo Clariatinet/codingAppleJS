@@ -48,6 +48,7 @@
       <h4>Shirts on Sale</h4>
       <button id="login" class="btn btn-danger">로그인</button>
     </div>
+    <div class="alert alert-danger">5초 이내 구매 시 사은품 증정!</div>
     <script>
       document
         .getElementsByClassName('navbar-toggler')[0]
@@ -80,8 +81,25 @@
           }
         });
 
-      // badge 홀수번 클릭시 내부글자 light로 변경
-      // badge 짝수번 클릭시 내부글자 dark로 변경
+      let count = 0;
+      document.querySelector('.badge').addEventListener('click', function () {
+        count++;
+        if (count % 2 === 1) {
+          document.querySelector('.badge').classList.remove('bg-dark');
+          document.querySelector('.badge').classList.add('bg-white');
+          document.querySelector('.badge').innerHTML = 'Light';
+        } else {
+          document.querySelector('.badge').innerHTML = 'Dark';
+          document.querySelector('.badge').classList.remove('bg-white');
+          document.querySelector('.badge').classList.add('bg-dark');
+        }
+      });
+
+      setTimeout(hi, 1000);
+
+      function hi() {
+        console.log('안녕');
+      }
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

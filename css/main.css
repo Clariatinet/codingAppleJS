@@ -9,6 +9,7 @@
   opacity: 0;
   transition: all 0.3s;
 }
+
 .white-bg {
   background: white;
   border-radius: 5px;
@@ -24,6 +25,18 @@
   background-color: lightgray;
 }
 
+.bg-dark {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+}
+
+.bg-white {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
 .show {
   display: block;
 }
@@ -31,4 +44,9 @@
 .show-modal {
   visibility: visible;
   opacity: 1;
+}
+
+.dark {
+  background-color: black;
+  color: white;
 }
